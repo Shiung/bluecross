@@ -1,0 +1,134 @@
+// variable
+$red : #ea1d2a;
+$orange : #ffc300;
+$fontColor : #888;
+$footerColor : #626262;
+
+
+body{
+    min-width: 768px !important;
+}
+@media screen and ( max-width:767px ){
+    .container {
+        max-width: 100%;
+    }
+}
+.nav-header{ 
+    background-color: $red;
+    box-shadow: 0px 5px $orange;
+
+    .nav-box{
+        padding: 10px 0; 
+        color:#fff;
+
+        .logo{
+            width: 150px;
+        }
+
+        a{
+            color:#fff;
+            text-decoration: none;
+        }
+
+        .signStatus{
+            margin-bottom:0;
+
+            img{
+                width: 25px;
+            }
+            .mem-name{
+                font-size: 14px;
+                vertical-align: bottom;
+            }
+            .signIn{
+                &:hover .signIn-arrow{
+                    animation: signInAni .5s linear infinite both;
+                }
+            }
+            .signOut{
+                &:hover .signOut-arrow{
+                    animation: signOutAni .5s linear infinite both;
+                }
+            }
+        }
+    }
+}
+
+.step-menu{
+    margin-top:5px;
+    background: linear-gradient(90deg , #fcd4ca 0% , #feedc6 100%);
+
+    .nav{
+        .nav-item{
+            &:nth-of-type(1){
+                margin:auto;
+                .menuList{
+                    svg{
+                        width: 30px;
+                    }
+                }
+            }
+            //邊界
+            &:not(:first-child){
+                position: relative;
+            }
+
+            a{
+                color:$fontColor;
+                border-radius: 0;
+                border:none;
+                transition:.5s;
+            }
+            a.active{
+                box-shadow: 0px 5px $orange inset;
+                color:$red;
+            }
+            a.nav-link:not(.menuList){                
+                height: 100px;
+                .step-area{
+                    width: 120px;
+                }
+                svg{
+                    width: 20px;
+                    margin-right:5px; 
+                }
+                .step-title{
+                    font-size: 18px;
+                }
+                .step-sub-title{
+                    font-size: 12px;
+                }
+
+                &:hover{
+                    box-shadow: 0px 5px $orange inset;
+                    color:$red;
+                    background-color: #fff;
+                }
+            }
+        }
+    } 
+}
+
+.step-content{
+    height: 1000px;
+    background-color: #ccc;
+}
+
+footer{
+    background-color: $footerColor;
+    color:#fff;
+    font-size: 12px;
+    padding: 15px 0;
+}
+
+
+@keyframes signInAni{
+    0%{transform: translateX(0px);}
+    50%{transform: translateX(2px);}
+    100%{transform: translateX(0px);}
+}
+@keyframes signOutAni{
+    0%{transform: translateX(0px);}
+    50%{transform: translateX(-2px);}
+    100%{transform: translateX(0px);}
+}
