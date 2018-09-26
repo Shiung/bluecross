@@ -1,0 +1,64 @@
+{
+    "data": [
+        {
+            "id": "ANN000001",
+            "owner": "Peter Lee",
+            "insueredName": "Peter Lee",
+            "productType": "GENE",
+            "currency": "USD",
+            "create": "2018/09/19",
+            "sign": "2018/09/19",
+            "status": "PD"
+        },  
+        {
+            "id": "ANN000002",
+            "owner": "Alexis lee",
+            "insueredName": "Alexis lee",
+            "productType": "PRAP",
+            "currency": "HK",
+            "create": "2018/09/20",
+            "sign": "2018/09/20",
+            "status": "SN"
+        },  
+        {
+            "id": "ANN000003",
+            "owner": "Marty",
+            "insueredName": "Marty",
+            "productType": "SBP8",
+            "currency": "CHY",
+            "create": "2018/09/21",
+            "sign": "2018/09/21",
+            "status": "SC"
+        },  
+        {
+            "id": "ANN000004",
+            "owner": "Shelly Mao",
+            "insueredName": "Shelly Mao",
+            "productType": "STER",
+            "currency": "JPY",
+            "create": "2018/09/21",
+            "sign": "2018/09/21",
+            "status": "SN"
+        }, 
+        {
+            "id": "ANN000005",
+            "owner": "Mantou Chen",
+            "insueredName": "Mantou Chen",
+            "productType": "PRAP",
+            "currency": "JPY",
+            "create": "2018/09/22",
+            "sign": "2018/09/22",
+            "status": "SN"
+        },
+        {
+            "id": "ANN000006",
+            "owner": "Wynne Hsu",
+            "insueredName": "Wynne Hsu",
+            "productType": "SBP8",
+            "currency": "EUR",
+            "create": "2018/09/24",
+            "sign": "2018/09/24",
+            "status": "SN"
+        }  
+    ]  
+  }
