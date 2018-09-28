@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $('#example').DataTable({
-        "dom": '<"top"i>rt<"bottom-page"p><"clear">',
+        "dom": '<"top"i>rt<"bottom-page d-flex justify-content-center"p><"clear">',
         // "lengthMenu": [[10, 20, 30, -1], [10, 20, 30, "All"]],
         "pageLength": 5,
         "responsive": true,
@@ -27,8 +27,8 @@ $(document).ready(function(){
             { "data": "status" },
             { "data":function(source, type, val){
                 var options = `
-                <a href="javascript:;"><i class="material-icons options">visibility</i></a>
-                <a href="javascript:;"><i class="material-icons options">print</i></a>
+                <a href="javascript:;" class="swal-active"><i class="material-icons options">visibility</i></a>
+                <a href="javascript:;" class="swal-active"><i class="material-icons options">print</i></a>
                 `
                 return options;
             }}
@@ -46,11 +46,18 @@ $(document).ready(function(){
                     first: "|<",
                     last: ">|"
                 }
+        },
+        // 重新綁定
+        "fnDrawCallback" : function(oSettings){
+        	$(".swal-active").on('click',function(e){
+                e.preventDefault();
+                swalUse();
+            })
         }
     });
 
     $('#example2').DataTable({
-        "dom": '<"top"i>rt<"bottom-page"p><"clear">',
+        "dom": '<"top"i>rt<"bottom-page d-flex justify-content-center"p><"clear">',
         // "lengthMenu": [[10, 20, 30, -1], [10, 20, 30, "All"]],
         "pageLength": 5,
         "responsive": true,
@@ -69,10 +76,10 @@ $(document).ready(function(){
             { "data": "status" },
             { "data":function(source, type, val){
                 var options = `
-                <a href="javascript:;"><i class="material-icons options">visibility</i></a>
-                <a href="javascript:;"><i class="material-icons options">print</i></a>
-                <a href="javascript:;"><i class="material-icons options">edit</i></a>
-                <a href="javascript:;"><i class="material-icons options">delete</i></a>
+                <a href="javascript:;" class="swal-active"><i class="material-icons options">visibility</i></a>
+                <a href="javascript:;" class="swal-active"><i class="material-icons options">print</i></a>
+                <a href="javascript:;" class="swal-active"><i class="material-icons options">edit</i></a>
+                <a href="javascript:;" class="swal-active"><i class="material-icons options">delete</i></a>
                 `
                 return options;
             }}
@@ -90,6 +97,13 @@ $(document).ready(function(){
                     first: "|<",
                     last: ">|"
                 }
+        },
+        // 重新綁定
+        "fnDrawCallback" : function(oSettings){
+        	$(".swal-active").on('click',function(e){
+                e.preventDefault();
+                swalUse();
+            })
         }
     });
 });
