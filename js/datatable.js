@@ -17,7 +17,9 @@ $(document).ready(function(){
                 `
                 return checkBox;
             }},
-            { "data": "id" },
+            { "data": function(source, type, val){
+                return '<a href="javascript:;" class="swal-active">'+source.id+'</a>';
+            }},
             { "data": "owner" },
             { "data": "insueredName" },
             { "data": "productType" },
@@ -27,7 +29,6 @@ $(document).ready(function(){
             { "data": "status" },
             { "data":function(source, type, val){
                 var options = `
-                <a href="javascript:;" class="swal-active"><i class="material-icons options">visibility</i></a>
                 <a href="javascript:;" class="swal-active"><i class="material-icons options">print</i></a>
                 `
                 return options;
@@ -66,7 +67,9 @@ $(document).ready(function(){
         "bInfo": false,
         "ajax": 'data.json',
         "columns": [
-            { "data": "id" },
+            { "data":function(source, type, val){
+                return '<a href="javascript:;" class="swal-active">'+source.id+'</a>';
+            }},
             { "data": "owner" },
             { "data": "insueredName" },
             { "data": "productType" },
@@ -76,10 +79,9 @@ $(document).ready(function(){
             { "data": "status" },
             { "data":function(source, type, val){
                 var options = `
-                <a href="javascript:;" class="swal-active"><i class="material-icons options">visibility</i></a>
-                <a href="javascript:;" class="swal-active"><i class="material-icons options">print</i></a>
                 <a href="javascript:;" class="swal-active"><i class="material-icons options">edit</i></a>
                 <a href="javascript:;" class="swal-active"><i class="material-icons options">delete</i></a>
+                <a href="javascript:;" class="swal-active"><i class="material-icons options">print</i></a>
                 `
                 return options;
             }}

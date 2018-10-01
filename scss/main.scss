@@ -80,7 +80,6 @@ body{
     }
 }
 
-
 .nav-header{ 
     background-color: $red;
     box-shadow: 0px 5px $orange;
@@ -117,6 +116,37 @@ body{
             .signOut{
                 &:hover .signOut-arrow{
                     animation: signOutAni .5s linear infinite both;
+                }
+            }
+        }
+
+
+        .member{
+            &:hover{
+                .account-list{
+                    display: block;
+                }
+            }
+        }
+        .account-list{
+            position: absolute;
+            z-index: 2000;
+            padding: 0;
+            background-color: transparent;
+            border-radius: .25rem;
+            box-shadow:  0px 5px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: none;
+            .list-group-item{
+                border:none;
+                a{
+                    display: block;
+                    padding: .25rem 1.5rem;
+                    color:#888;
+                    &:hover{
+                        background-color: #f9f6ee;
+                        color: #ca2d37;
+                    }
                 }
             }
         }

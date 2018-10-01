@@ -108,6 +108,37 @@ body {
           animation: signOutAni .5s linear infinite both;
 }
 
+.nav-header .nav-box .member:hover .account-list {
+  display: block;
+}
+
+.nav-header .nav-box .account-list {
+  position: absolute;
+  z-index: 2000;
+  padding: 0;
+  background-color: transparent;
+  border-radius: .25rem;
+  -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: none;
+}
+
+.nav-header .nav-box .account-list .list-group-item {
+  border: none;
+}
+
+.nav-header .nav-box .account-list .list-group-item a {
+  display: block;
+  padding: .25rem 1.5rem;
+  color: #888;
+}
+
+.nav-header .nav-box .account-list .list-group-item a:hover {
+  background-color: #f9f6ee;
+  color: #ca2d37;
+}
+
 .step-menu {
   margin-top: 5px;
   height: 100px;

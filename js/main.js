@@ -41,7 +41,6 @@ $(function(){
                 });
                 break;
         }
-        console.log(id);
         // location.href = "index.html";
     })
     // logout
